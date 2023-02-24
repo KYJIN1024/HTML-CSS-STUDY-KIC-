@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <style>
+        /* 자손 / 후손 */
+        div > p {
+            color: red;
+        }
+        /* css3과 css5는 후손이기 때문에 적용되지않음 */
+        div p { color:yellowgreen;}
+        /* 아우 */
+        div + p { color:orangered;}
+        /* 아우전체
+        div ~ p { color:orchid;} */
+    </style>
+</head>
+<body>
+    <!-- DOM(Document Object Model) Tree  -->
+    <p>hello css1</p>
+    <div>
+        <p> hello css2</p>
+            <span>
+                <p>hello css3</p>
+            </span>
+        <p> hello css4</p>
+    </div>
+    <p>hello css5</p>
+</body>
+</html>
